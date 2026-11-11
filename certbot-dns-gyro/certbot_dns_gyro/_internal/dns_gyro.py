@@ -11,7 +11,7 @@ from certbot.plugins.dns_common import CredentialsConfiguration
 logger = logging.getLogger(__name__)
 
 DEFAULT_API = "https://www.gyrohosting.com/api/v1/client/"
-USER_AGENT = "certbot-dns-gyro/0.1.0"
+USER_AGENT = "certbot-dns-gyro/0.1.1"
 
 
 class Authenticator(dns_common.DNSAuthenticator):

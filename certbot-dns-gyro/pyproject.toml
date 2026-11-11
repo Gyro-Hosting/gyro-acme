@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "certbot-dns-gyro"
-version = "0.1.0"
+version = "0.1.1"
 description = "Gyro DNS authenticator plugin for Certbot (DNS-01, wildcard certificates)"
 readme = "README.md"
 license = {text = "MIT"}

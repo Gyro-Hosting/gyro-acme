@@ -4,9 +4,16 @@ Gyro DNS authenticator plugin for [Certbot](https://certbot.eff.org): DNS-01 cha
 
 ## Install
 ```sh
-pip install "certbot-dns-gyro @ git+https://github.com/Gyro-Hosting/gyro-acme@v0.1.0#subdirectory=certbot-dns-gyro"
+pip install certbot-dns-gyro
 ```
-(Install into the same Python environment as Certbot. Snap Certbot users: use `pip` Certbot or acme.sh.)
+The package is on PyPI: https://pypi.org/project/certbot-dns-gyro/. Install it into the same Python environment as Certbot.
+
+**Snap Certbot cannot load this plugin.** Install Certbot with pip in a virtual environment instead (or use acme.sh):
+```sh
+python3 -m venv /opt/certbot
+/opt/certbot/bin/pip install certbot certbot-dns-gyro
+ln -s /opt/certbot/bin/certbot /usr/local/bin/certbot
+```
 
 ## Credentials
 ```ini

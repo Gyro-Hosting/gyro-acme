@@ -38,7 +38,7 @@ acme.sh --issue --dns dns_gyro -d example.com -d '*.example.com'
 ```
 **Certbot**
 ```sh
-pip install "certbot-dns-gyro @ git+https://github.com/Gyro-Hosting/gyro-acme@v0.1.0#subdirectory=certbot-dns-gyro"
+pip install certbot-dns-gyro   # PyPI; Snap Certbot cannot load it, use pip/venv Certbot
 printf 'dns_gyro_token = wck_...\n' > /etc/letsencrypt/gyro.ini && chmod 600 /etc/letsencrypt/gyro.ini
 certbot certonly --authenticator dns-gyro --dns-gyro-credentials /etc/letsencrypt/gyro.ini -d example.com -d '*.example.com'
 ```
