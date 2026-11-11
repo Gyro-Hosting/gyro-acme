@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-gyro"
+version = "0.1.0"
+description = "Gyro DNS authenticator plugin for Certbot (DNS-01, wildcard certificates)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Gyro Hosting"}]
+requires-python = ">=3.8"
+dependencies = ["certbot>=2.0", "requests>=2.20"]
+classifiers = ["Environment :: Plugins", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Topic :: Security"]
+
+[project.urls]
+Homepage = "https://github.com/Gyro-Hosting/gyro-acme"
+
+[project.entry-points."certbot.plugins"]
+dns-gyro = "certbot_dns_gyro._internal.dns_gyro:Authenticator"
+
+[tool.setuptools.packages.find]
+include = ["certbot_dns_gyro*"]
